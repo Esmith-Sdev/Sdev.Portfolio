@@ -13,11 +13,28 @@
 .content {
   padding: 2rem;
 }
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.navbar-collapse {
+  border-top: 1px solid rgba(164, 107, 255, 0.3);
+  border-radius: 1px;
+}
 .nav-link {
   font-family: "Special Gothic Expanded One", sans-serif;
+  color: #fff !important;
+  border-top: 1px solid rgba(164, 107, 255, 0.3) !important;
+  border-radius: 1px;
+}
+.nav-link:last-child {
+  border-radius: 1px;
+  border-bottom: 1px solid rgba(164, 107, 255, 0.3) !important;
+}
+.nav-link:hover {
+  color: rgb(164, 107, 255) !important;
 }
 .nav-link:active {
-  color: #a46bff !important;
+  color: #5f3c99 !important;
 }
 .language-icon {
   width: 75px;
@@ -57,18 +74,35 @@ h1 {
 }
 h4 {
   font-family: "Special Gothic Expanded One", sans-serif;
-  color: #fff !important;
+  color: #ffe054 !important;
   font-size: 1rem !important;
-  font-weight: 500;
-  filter: drop-shadow(0px 0px 5px #000);
+  font-weight: 700;
+  filter: drop-shadow(0px 0px 5px #ffe678);
+  text-align: start;
+}
+h5 {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  color: #ffe054 !important;
+  font-size: 1.5rem !important;
+  font-weight: 700;
+  filter: drop-shadow(0px 0px 5px #ffe678);
 }
 .languages {
   padding-top: 5rem;
+  flex: 1;
 }
 p {
   font-family: "Lexend Zetta", sans-serif;
   color: #fff;
   font-size: 1.2rem;
+  font-weight: 500;
+  filter: drop-shadow(0px 0px 5px #000);
+}
+.about-paragraph {
+  font-family: "Lexend Zetta", sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: start;
   font-weight: 500;
   filter: drop-shadow(0px 0px 5px #000);
 }

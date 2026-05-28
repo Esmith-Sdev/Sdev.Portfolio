@@ -39,12 +39,7 @@ function App() {
         />
       </div>
       <div className="page">
-        <Navbar
-          expand="lg"
-          className="bg-body-tertiary"
-          sticky="top"
-          expanded={expanded}
-        >
+        <Navbar expand="lg" sticky="top" expanded={expanded}>
           <Container>
             <Navbar.Brand href="#home">
               <img
@@ -56,7 +51,7 @@ function App() {
               />
             </Navbar.Brand>
             <div className="d-lg-none">
-              <Hamburger toggled={expanded} toggle={setExpanded} />
+              <Hamburger toggled={expanded} toggle={setExpanded} color="#fff" />
             </div>
             <Navbar.Collapse id="nav">
               <Nav className="ms-auto">
@@ -74,30 +69,40 @@ function App() {
               <img src={ProfilePicture} className="profile-image" />
             </div>
             <p>
-              “Hello, I’m <span>Eddie Smith</span>, a Full Stack Developer and
+              Hello, I’m <span>Eddie Smith</span>, a Full Stack Developer and
               recent graduate with an Associate degree in{" "}
               <span>Full Stack Web Development</span>. I’m passionate about
               creating applications, solving problems, and continuously
               learning. I’m excited to bring my skills to a team environment
-              while continuing to grow as a developer.”{" "}
+              while continuing to grow as a developer.{" "}
             </p>
           </div>
           <div className="languages">
-            <h1>Education</h1>
-            <div className="d-flex align-items-flex-start flex-column justify-content-center">
-              <h4>
-                Degree:{" "}
-                <span style={{ fontSize: ".8rem", marginLeft: ".5rem" }}>
-                  Associates in Full Stack Web Development
-                </span>
-              </h4>
-              <h4>
-                Goals:{" "}
-                <span style={{ fontSize: ".8rem", marginLeft: ".5rem" }}>
-                  As I progress in my career I would like to achieve my
-                  bachelors in Software Development.{" "}
-                </span>
-              </h4>
+            <h1>About Me</h1>
+            <div className="d-flex align-items-start flex-column pt-2 gap-1">
+              <h5>Degree: </h5>
+              <p className="about-paragraph">
+                Associates in Full Stack Web Development
+              </p>
+              <h5>Goals: </h5>
+              <p className="about-paragraph">
+                As I progress in my career, I would like to continue my
+                education and earn my bachelor’s degree in Software Development.
+                I am also ambitious about growing into a leadership role where I
+                can lead development teams and contribute to larger projects
+                within a company. In the future, I would also like to teach
+                coding classes for young developers.{" "}
+              </p>
+              <h5>Experience: </h5>
+              <p className="about-paragraph">
+                {" "}
+                Most of my experience has come from personal and school
+                projects. Building personal apps has allowed me to experiment
+                and learn more about what I enjoy creating. In group projects, I
+                often take on the role of team leader because I am highly
+                communicative and organized, which helps create a streamlined
+                workflow for my team members.
+              </p>{" "}
             </div>
 
             <div>
