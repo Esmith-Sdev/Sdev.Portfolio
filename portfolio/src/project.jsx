@@ -1,7 +1,15 @@
 import Navbar from "./navbar";
 import FishquestLogo from "./assets/FishQuest-Logo-only.png";
 import Grainient from "./Grainient";
+import ReactLogo from "./assets/react.svg";
+import NodeLogo from "./assets/nodejs.svg";
+import MongoLogo from "./assets/mongodb.svg";
+import ExpoLogo from "./assets/expo.png";
+import { useLocation } from "react-router-dom";
 export default function Project() {
+  const location = useLocation();
+  const { title, src, overview, goals, stack, view, github } =
+    location.state || {};
   return (
     <>
       <div className="page-background">
@@ -34,37 +42,46 @@ export default function Project() {
         <Navbar />
         <div className="content">
           <div className="project-container">
-            <h1>Project Name</h1>
+            <h1>{title}</h1>
             <div className="project-button">
-              <img
-                className="project-details-logo"
-                src={FishquestLogo}
-                alt=""
-              />
+              <img className="project-details-logo" src={src} alt="" />
             </div>
             <div className="d-flex flex-row gap-5 pt-3">
-              <button className="project-detail-button">View</button>
-              <button className="project-detail-button">Github</button>
+              <a className="project-detail-button" href={view} target="_blank">
+                View
+              </a>
+              <a
+                className="project-detail-button"
+                href={github}
+                target="_blank"
+              >
+                Github
+              </a>
             </div>
           </div>
           <div className="d-flex align-items-start flex-column pt-3">
             <h5>Overview: </h5>
-            <p className="detail-paragraph">
-              This is a passion project I have been working on for over a year.
-              The app allows users to log catches, complete challenges, track
-              progress, and save fishing setups while building a more game-like
-              fishing experience. Built using React Native with Expo for the
-              frontend and Node.js, Express, and MongoDB for the backend,
-              FishQuest combines social, tracking, and progression features into
-              one platform.
-            </p>
+            <p className="detail-paragraph">{overview}</p>
             <h5>Goal: </h5>
-            <p className="detail-paragraph">
-              My main goal was to make navigation within the app as easy as
-              possible, since users would most likely be fishing while using it.
-              The app was also highly detailed, which allowed me to expand my
-              knowledge of MongoDB and React Native.
-            </p>
+            <p className="detail-paragraph">{goals}</p>
+          </div>
+          <div className="d-flex flex-column justify-content-center">
+            <h5>Tech Stack</h5>
+            <div className="d-flex flex-row gap-3 justify-content-center">
+              <div className="d-flex flex-column align-items-center">
+                {stack?.map((s, index) => (
+                  <div className="icon-circle-container">
+                    <img
+                      key={index}
+                      src={s.src}
+                      alt={s.alt}
+                      className="icon-circle-image"
+                    />
+                  </div>
+                ))}
+                <p className="icon-circle-text">React</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

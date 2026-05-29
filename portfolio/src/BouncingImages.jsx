@@ -4,6 +4,7 @@ import AmazonLogo from "./assets/amazon.svg";
 import GithubLogo from "./assets/github.svg";
 import JavascriptLogo from "./assets/javascript.svg";
 import MongoLogo from "./assets/mongodb.svg";
+import ExpoLogo from "./assets/expo.png";
 import NodeLogo from "./assets/nodejs.svg";
 import OracleLogo from "./assets/oracle.svg";
 import PythonLogo from "./assets/python.svg";
@@ -19,6 +20,7 @@ export default function BouncingImages() {
     ReactLogo,
     PythonLogo,
     JavascriptLogo,
+    ExpoLogo,
     CSSLogo,
     HTMLLogo,
     MongoLogo,
