@@ -1,15 +1,14 @@
 import "./App.css";
 import { Container, Row, Col } from "react-bootstrap";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Logo from "./assets/ES-PURPLE.png";
-import { Sling as Hamburger } from "hamburger-react";
 import Grainient from "./Grainient.jsx";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import BouncingImages from "./BouncingImages.jsx";
 import ProfilePicture from "./assets/profile.jpg";
+import FishquestLogo from "./assets/FishQuest-Logo-only.png";
+import SunriseLogo from "./assets/sunrise-logo.png";
+import NavbarComponent from "./navbar.jsx";
 function App() {
-  const [expanded, setExpanded] = useState(false);
   return (
     <>
       <div className="page-background">
@@ -39,30 +38,7 @@ function App() {
         />
       </div>
       <div className="page">
-        <Navbar expand="lg" sticky="top" expanded={expanded}>
-          <Container>
-            <Navbar.Brand href="#home">
-              <img
-                alt=""
-                src={Logo}
-                width="80"
-                height="auto"
-                className="d-inline-block align-top"
-              />
-            </Navbar.Brand>
-            <div className="d-lg-none">
-              <Hamburger toggled={expanded} toggle={setExpanded} color="#fff" />
-            </div>
-            <Navbar.Collapse id="nav">
-              <Nav className="ms-auto">
-                <Nav.Link onClick={() => setExpanded(false)}>Home</Nav.Link>
-                <Nav.Link>About Me</Nav.Link>
-                <Nav.Link>Education</Nav.Link>
-                <Nav.Link>Projects</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
+        <NavbarComponent />
         <div className="content">
           <div className="d-flex flex-column justify-content-center align-items-center gap-3">
             <div className="profile-image-container">
@@ -108,6 +84,33 @@ function App() {
             <div>
               <BouncingImages />
             </div>
+          </div>
+          <div className="projects">
+            <h1 className="mb-3">Projects</h1>
+            <Link className="project-button" to="/project">
+              <h4 className="project-title">FishQuest</h4>
+              <div className="black-overlay"></div>
+              <img
+                className="project-logo"
+                style={{ bottom: "150px", right: "70px" }}
+                src={FishquestLogo}
+              ></img>
+            </Link>
+            <Link className="project-button" to="/project">
+              {" "}
+              <h4 className="project-title">Sunrise Kitchen</h4>
+              <div className="black-overlay"></div>
+              <img
+                className="project-logo"
+                src={SunriseLogo}
+                style={{ bottom: "150px", right: "150px" }}
+              ></img>
+            </Link>
+            <Link className="project-button" to="/project">
+              {" "}
+              <h4 className="project-title">Coursebuilder.io</h4>
+              <div className="black-overlay"></div>
+            </Link>
           </div>
         </div>
       </div>
