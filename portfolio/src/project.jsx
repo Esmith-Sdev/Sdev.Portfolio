@@ -13,6 +13,9 @@ import SunriseLogo from "./assets/sunrise-logo.png";
 import HTMLLogo from "./assets/html.svg";
 import CSSLogo from "./assets/css.svg";
 import { useLocation } from "react-router-dom";
+import CreateLogVideo from "./assets/CREATE-LOG.mp4";
+import CreateRigVideo from "./assets/CREATE-RIG.mp4";
+import OtherFeaturesVideo from "./assets/OTHER-FEATURES.mp4";
 export default function Project() {
   const { id } = useParams();
   const stacks = {
@@ -164,6 +167,39 @@ export default function Project() {
               ))}
             </div>
           </div>
+          {title === "FishQuest" ? (
+            <div className="d-flex justify-content-center">
+              <div className="videos">
+                <div className="d-flex flex-column">
+                  <h4 style={{ textAlign: "center" }}>Create Log</h4>
+                  <div className="video-container">
+                    <video width="100%" autoPlay muted loop playsInline>
+                      <source src={CreateLogVideo} type="video/mp4"></source>
+                    </video>
+                  </div>
+                </div>
+                <div className="d-flex flex-column">
+                  <h4 style={{ textAlign: "center" }}>Create Rig</h4>
+                  <div className="video-container">
+                    <video width="100%" autoPlay muted loop playsInline>
+                      <source src={CreateRigVideo} type="video/mp4"></source>
+                    </video>
+                  </div>
+                </div>
+                <div className="d-flex flex-column">
+                  <h4 style={{ textAlign: "center" }}>Other Features</h4>
+                  <div className="video-container">
+                    <video width="100%" autoPlay muted loop playsInline>
+                      <source
+                        src={OtherFeaturesVideo}
+                        type="video/mp4"
+                      ></source>
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : null}
         </div>
       </div>
     </>

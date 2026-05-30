@@ -330,6 +330,25 @@ span {
   justify-content: center;
   align-items: center;
 }
+.videos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 15px;
+
+  width: 100%;
+}
+.video-container {
+  width: 200px;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+}
 @media (min-width: 768px) {
   .content {
     padding-top: 2rem;
@@ -353,6 +372,10 @@ span {
   }
   .detail-container {
     padding: 2rem 5rem;
+  }
+  .videos {
+    flex-direction: row;
+    min-width: 800px;
   }
 }
 @media (min-width: 1200px) {

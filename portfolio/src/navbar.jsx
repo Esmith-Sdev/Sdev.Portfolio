@@ -19,7 +19,7 @@ export default function NavbarComponent() {
   return (
     <Navbar expand="lg" sticky="top" expanded={expanded}>
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             alt=""
             src={Logo}
