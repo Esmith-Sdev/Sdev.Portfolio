@@ -72,6 +72,16 @@ export default function NavbarComponent() {
             >
               Projects
             </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/"
+              state={{ scrollTo: "contact" }}
+              onClick={() => {
+                setExpanded(false);
+              }}
+            >
+              Contact
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

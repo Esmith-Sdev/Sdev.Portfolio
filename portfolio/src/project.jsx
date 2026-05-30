@@ -144,7 +144,7 @@ export default function Project() {
             <h5>Goal: </h5>
             <p className="detail-paragraph">{goal}</p>
           </div>
-          <div className="d-flex flex-column justify-content-center gap-2">
+          <div className="stack-container">
             <h5>Tech Stack</h5>
             <div className="d-flex flex-row gap-3 justify-content-center">
               {stack?.map((s, index) => (

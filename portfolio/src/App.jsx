@@ -21,6 +21,7 @@ import CSSLogo from "./assets/css.svg";
 import HTMLLogo from "./assets/html.svg";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { Envelope, Linkedin } from "react-bootstrap-icons";
 function App() {
   const location = useLocation();
   useEffect(() => {
@@ -125,9 +126,27 @@ function App() {
           </div>
           <div className="contact" id="contact">
             <h1>Contact</h1>
-            <div className="d-flex flex-row justify-content-center gap-3">
-              <h5>E-Mail:</h5>
-              <p>sdev.esmith@gmail.com</p>
+            <div className="d-flex align-items-start flex-column gap-3">
+              <a
+                className="contact-link"
+                href="mailto:sdev.esmith@gmail.com"
+                target="_blank"
+              >
+                <div className="contact-icon-container">
+                  <Envelope className="contact-icon" />
+                </div>
+                <span className="contact-text mb-0">sdev.esmith@gmail.com</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/eddie-smith-jr/"
+                className="contact-link"
+                target="_blank"
+              >
+                <div className="contact-icon-container">
+                  <Linkedin className="contact-icon" target="_blank" />
+                </div>
+                <span className="contact-text">LinkedIn</span>
+              </a>
             </div>
           </div>
         </div>
